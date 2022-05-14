@@ -1,1 +1,1 @@
-# mode
+# mode = fasion
