@@ -1,0 +1,8 @@
+.navItem {
+    color: #000;
+    font-weight: bold;
+}
+
+.navItem:hover {
+    color: #747474;
+}
