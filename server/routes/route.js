@@ -2,7 +2,7 @@ const express = require("express");
 const recordRoutes = express.Router();
 
 // connect to the database
-const dbo = require("../db/conn");
+const dbo = require("../db/connection");
 
 // convert the id from string to ObjectId for the _id.
 // const ObjectId = require("mongodb"). ObjectId;
