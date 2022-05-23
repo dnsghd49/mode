@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Signika+Negative&family=Smooch+Sans:wght@100;200;300;400;500;600&display=swap");
+
 .App {
   text-align: center;
+  background-color: #ffffff;
+  font-family: "Kanit", sans-serif;
+  font-family: "Signika Negative", sans-serif;
+  font-family: "Smooch Sans", sans-serif;
+  font-size: large;
+  color: #0d3130;
 }
 
 .App-logo {
