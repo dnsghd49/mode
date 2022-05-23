@@ -4,6 +4,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Main from './pages/Main';
 import Topbar from './components/Topbar';
 import MainNav from './components/MainNav';
+import Carts from './components/Carts';
+import ShopAll from './pages/ShopAll';
+import AboutUs from './pages/AboutUs';
+import Events from './pages/Events';
+import FashionSus from './pages/FashionSus';
 
 function App() {
   return (
@@ -13,6 +18,11 @@ function App() {
         <MainNav />
         <Routes>
           <Route path="/" element={<Main />} />
+          <Route path="/cart" element={<Carts />} />
+          <Route path="/shop-all" element={<ShopAll />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/fashion-sustainability" element={<FashionSus />} />
         </Routes>
       </BrowserRouter>
     </div>
