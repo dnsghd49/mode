@@ -9,7 +9,7 @@ const dbo = require("../db/connection");
 
 
 recordRoutes.route("/record").get(function (req, res) {
-    let db_connect = dbo.getDb("employees");
+    let db_connect = dbo.getDb("Fezzane");
     db_connect
         .collection("records")
         .find({})
@@ -35,9 +35,9 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 recordRoutes.route("/record/add").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myobj = {
-        name: req.body.name,
-        position: req.body.position,
-        level: req.body.level,
+        product_name: req.body.product_name,
+        price: req.body.price,
+        product_description: req.body.product_description,
     };
     db_connect.collection("records").insertOne(myobj, function (err, res) {
         if (err) throw err;
@@ -51,9 +51,9 @@ recordRoutes.route("/update/:id").post(function (req, response) {
     let myquery = { _id: ObjectId(req.params.id) };
     let newvalues = {
         $set: {
-            name: req.body.name,
-            position: req.body.position,
-            level: req.body.level,
+            product_name: req.body.product_name,
+            price: req.body.price,
+            product_description: req.body.product_description,
         },
     }
 });

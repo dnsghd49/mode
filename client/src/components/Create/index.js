@@ -3,9 +3,10 @@ import { useNavigate } from "react-router";
 
 function Create() {
     const [form, setForm] = useState({
-        name: "",
-        position: "",
-        level: "",
+        product_name: "",
+        price: "",
+        product_description: "",
+        image_url: "",
     });
     const navigate = useNavigate();
 
@@ -35,35 +36,47 @@ function Create() {
                 return;
             });
 
-        setForm({ name: "", position: "", level: "" });
+        setForm({ product_name: "", price: "", product_description: "" });
         navigate("/");
     }
 
     // This following section will display the form that takes the input from the user.
     return (
         <div>
-            <h3>Create New Record</h3>
+            <h3>Register a new product</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="product_name">product_name</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="name"
-                        value={form.name}
-                        onChange={(e) => updateForm({ name: e.target.value })}
+                        id="product_name"
+                        value={form.product_name}
+                        onChange={(e) => updateForm({ product_name: e.target.value })}
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="position">Position</label>
+                    <label htmlFor="price">price</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="position"
-                        value={form.position}
-                        onChange={(e) => updateForm({ position: e.target.value })}
+                        id="price"
+                        value={form.price}
+                        onChange={(e) => updateForm({ price: e.target.value })}
                     />
                 </div>
+
+                <div className="form-group">
+                    <label htmlFor="product_description">product_description</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="product_description"
+                        value={form.product_description}
+                        onChange={(e) => updateForm({ product_description: e.target.value })}
+                    />
+                </div>
+
                 <div className="form-group">
                     <div className="form-check form-check-inline">
                         <input
@@ -102,6 +115,7 @@ function Create() {
                         <label htmlFor="positionSenior" className="form-check-label">Senior</label>
                     </div>
                 </div>
+
                 <div className="form-group">
                     <input
                         type="submit"
