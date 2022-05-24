@@ -1,0 +1,12 @@
+.slide-show{
+    margin: 2em;
+}
+
+.slide-body {
+    padding-left: 300px;
+    padding-right: 300px;
+}
+
+img {
+    width: 1000px;
+}
