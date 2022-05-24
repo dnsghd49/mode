@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
+import FileBase64 from 'react-file-base64';
 
 function Create() {
     const [form, setForm] = useState({
@@ -76,6 +77,10 @@ function Create() {
                         onChange={(e) => updateForm({ product_description: e.target.value })}
                     />
                 </div>
+
+                <FileBase64
+                    multiple={true}
+                    onDone={(e) => updateForm({ image_url: e.target.value })} />
 
                 <div className="form-group">
                     <div className="form-check form-check-inline">
