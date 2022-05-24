@@ -9,6 +9,7 @@ import ShopAll from './pages/ShopAll';
 import AboutUs from './pages/AboutUs';
 import Events from './pages/Events';
 import FashionSus from './pages/FashionSus';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/fashion-sustainability" element={<FashionSus />} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
