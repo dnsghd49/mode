@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import logo from './Fezzan.png'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
@@ -8,8 +9,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faClipboardList, faCommentDots } from '@fortawesome/free-solid-svg-icons'
 import "./style.css"
+import Login from '../Login'
+import Signup from '../Signup'
 
 function Topbar() {
+    const [signupPopup, setSignupPopup] = useState(false)
+    const [loginPopup, setLoginPopup] = useState(false)
+
     return (
         <Navbar className='navStyle' expand={false} >
             <Container fluid>
@@ -102,8 +108,12 @@ function Topbar() {
                     <Nav.Link href="/notifications " >
                         <FontAwesomeIcon className='fa-lg icon' icon={faCommentDots} />
                     </Nav.Link>
-                    <Nav.Link className="loginBtn" href="/login">Log In</Nav.Link>
-                    {/* <Button variant="success">Sign Up</Button> */}
+                    
+                    <Nav.Link className="loginBtn" onClick={() => setSignupPopup(true)}>SIGN UP</Nav.Link>
+                    <Signup trigger={signupPopup} setTrigger={setSignupPopup} />
+
+                    <Nav.Link className="loginBtn" onClick={() => setLoginPopup(true)}>LOG IN</Nav.Link>
+                    <Login trigger={loginPopup} setTrigger={setLoginPopup} />
                 </Col>
             </Container>
         </Navbar>
