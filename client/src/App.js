@@ -11,6 +11,7 @@ import Events from './pages/Events';
 import FashionSus from './pages/FashionSus';
 import Footer from './components/Footer';
 import Create from './components/Create';
+import ItemList from './components/Item';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/fashion-sustainability" element={<FashionSus />} />
+          <Route exact path="/item-lists" element={<ItemList />} />
           <Route path="/create" element={<Create />} />
         </Routes>
       </BrowserRouter>
