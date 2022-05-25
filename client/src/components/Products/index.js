@@ -1,8 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button";
+import { addToCart } from '../../slices/cartSlice';
 
 function Products() {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
+    const handleAddToCart = (product) => {
+        dispatch(addToCart(product));
+        navigate("/cart");
+    };
+
     const [getData, setGetData] = useState([])
 
     useEffect(() => {
@@ -24,7 +35,7 @@ function Products() {
                     <Card.Title>{product.product_name}</Card.Title>
                     <Card.Text>{product.price}</Card.Text>
                     <Card.Text>{product.product_description}</Card.Text>
-                    <Button variant="primary">Buy Now</Button>
+                    <Button variant="primary" onClick={() => handleAddToCart(product)}>Buy Now</Button>
                 </Card.Body>
             </Card>
         )
