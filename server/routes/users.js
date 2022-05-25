@@ -4,7 +4,11 @@ const Router = express.Router();
 // connect to the database
 const dbo = require("../db/connection");
 
-Router.route("/auth").get(function (req, res) {
+// convert the id from string to ObjectId for the _id.
+// const ObjectId = require("mongodb"). ObjectId;
+
+
+Router.route("/users").get(function (req, res) {
     let db_connect = dbo.getDb("Fezzane");
     db_connect
         .collection("users")
@@ -15,10 +19,13 @@ Router.route("/auth").get(function (req, res) {
         });
 });
 
-Router.route("/auth").post(function (req, response) {
+
+// This section will help you create a new record.
+Router.route("/users/register").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myobj = {
-        username: req.body.username,
+        user_name: req.body.user_name,
+        email: req.body.email,
         password: req.body.password,
     };
     db_connect.collection("users").insertOne(myobj, function (err, res) {
