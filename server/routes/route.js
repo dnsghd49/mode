@@ -8,7 +8,7 @@ const dbo = require("../db/connection");
 const ObjectId = require("mongodb"). ObjectId;
 
 
-Router.route("/record").get(function (req, res) {
+Router.route("/products").get(function (req, res) {
     let db_connect = dbo.getDb("Fezzane");
     db_connect
         .collection("records")
@@ -20,7 +20,7 @@ Router.route("/record").get(function (req, res) {
 });
 
 // This section will help you get a single record by id
-Router.route("/record/:id").get(function (req, res) {
+Router.route("/products/:id").get(function (req, res) {
     let db_connect = dbo.getDb();
     let myquery = { _id: ObjectId(req.params.id) };
     db_connect
@@ -32,7 +32,7 @@ Router.route("/record/:id").get(function (req, res) {
 });
 
 // This section will help you create a new record.
-Router.route("/record/add").post(function (req, response) {
+Router.route("/products/add").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myobj = {
         product_name: req.body.product_name,

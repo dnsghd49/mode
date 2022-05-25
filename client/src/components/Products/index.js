@@ -1,7 +1,19 @@
+import React, { useEffect, useState } from 'react'
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button";
 
 function Products() {
+    const [githubData, setgithubData] = useState('')
+
+    useEffect(() => {
+        fetch('https://api.github.com/users/dnsghd49')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                setgithubData(data)
+            })
+    }, [])
+
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />

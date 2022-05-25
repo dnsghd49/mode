@@ -25,7 +25,7 @@ function Create() {
         // When a post request is sent to the create url, we'll add a new record to the database.
         const newPerson = { ...form };
 
-        await fetch("http://localhost:5000/record/add", {
+        await fetch("http://localhost:5000/products/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
