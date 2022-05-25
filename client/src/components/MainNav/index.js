@@ -17,9 +17,9 @@ function MainNav() {
                 <Nav.Item>
                     <Nav.Link className='navItem' href="/fashion-sustainability">Fashion Sustainability</Nav.Link>
                 </Nav.Item>
-                <Nav.Item>
+                {/* <Nav.Item>
                     <Nav.Link className='navItem' href="/sale">Sale</Nav.Link>
-                </Nav.Item>
+                </Nav.Item> */}
             </Nav>
         </div>
     )

@@ -1,3 +1,4 @@
+import "./style.css"
 import CardGroup from "react-bootstrap/CardGroup"
 import Card from "react-bootstrap/Card"
 import SlideShow from "../../components/SlideShow"
@@ -6,7 +7,7 @@ function Main() {
     return (
         <div>
             <SlideShow />
-            <h1>fast fashion</h1>
+            <h1>Fezzane<br />Fast & Sustainable <br /> Fashion </h1>
             <CardGroup>
                 <Card>
                     <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />

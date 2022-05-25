@@ -1,0 +1,10 @@
+h1 {
+    position: absolute;
+    left: 23.5em;
+    bottom: 1em;
+    z-index: 2;
+    font-size: 3em;
+    background-color: rgba(201, 168, 255, 0.911);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}

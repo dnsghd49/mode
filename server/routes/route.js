@@ -5,7 +5,7 @@ const Router = express.Router();
 const dbo = require("../db/connection");
 
 // convert the id from string to ObjectId for the _id.
-const ObjectId = require("mongodb"). ObjectId;
+const ObjectId = require("mongodb").ObjectId;
 
 
 Router.route("/products").get(function (req, res) {
@@ -58,6 +58,10 @@ Router.route("/update/:id").post(function (req, response) {
             image_url: req.body.image_url,
         },
     }
+    db_connect.collection("records").updateOne(myquery, newvalues, function (err, res) {
+        if (err) throw err;
+        response.json(res);
+    });
 });
 
 // This section will help you delete a record
