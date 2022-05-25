@@ -19,9 +19,9 @@ https://fezzane-fashion.herokuapp.com/
 
 * [Screenshot](#screenshot)
 
-* [Installation](#installation)
+* [Configuration](#Configuration)
 
-* [Usage](#usage)
+* [Installation](#installation)
 
 * [Contributing](#contributing)
 
@@ -31,25 +31,32 @@ https://fezzane-fashion.herokuapp.com/
 
 ## Screenshot
 
-![ScreenShot](https://raw.github.com/Dnsghd49/mode/blob/main/client/public/screenshot.png
+![ScreenShot](https://github.com/dnsghd49/mode/blob/main/client/public/screenshot.png)
+
+## Configuration
+
+In order to run this application locally you need to make a .env file to the server folder:
+
+```
+cd server
+touch .env
+
+<inside of .env>
+ATLAS_URI=mongodb+srv://<username>:<password>@sandbox.jadwj.mongodb.net/employees?retryWrites=true&w=majority
+PORT=5000
+```
 
 ## Installation
 
-To install necessary dependencies, run the following command:
+To install necessary dependencies, run the following command from the root since the package.json from the root directory configed to run both npm ins to the BE and FE:
 
 ```
 npm install
 ```
-
-## Usage
-
-
-
-
   
 ## Contributing
 
-
+please make an pull request and I'll review the changes! THANK YOU!!
 
 ## Tests
 
