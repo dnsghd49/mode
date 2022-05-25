@@ -1,5 +1,5 @@
 const express = require("express");
-const recordRoutes = express.Router();
+const Router = express.Router();
 
 // connect to the database
 const dbo = require("../db/connection");
@@ -8,7 +8,7 @@ const dbo = require("../db/connection");
 // const ObjectId = require("mongodb"). ObjectId;
 
 
-recordRoutes.route("/record").get(function (req, res) {
+Router.route("/record").get(function (req, res) {
     let db_connect = dbo.getDb("Fezzane");
     db_connect
         .collection("records")
@@ -20,7 +20,7 @@ recordRoutes.route("/record").get(function (req, res) {
 });
 
 // This section will help you get a single record by id
-recordRoutes.route("/record/:id").get(function (req, res) {
+Router.route("/record/:id").get(function (req, res) {
     let db_connect = dbo.getDb();
     let myquery = { _id: ObjectId(req.params.id) };
     db_connect
@@ -32,7 +32,7 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 });
 
 // This section will help you create a new record.
-recordRoutes.route("/record/add").post(function (req, response) {
+Router.route("/record/add").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myobj = {
         product_name: req.body.product_name,
@@ -47,7 +47,7 @@ recordRoutes.route("/record/add").post(function (req, response) {
 });
 
 // This section will help you update a record by id.
-recordRoutes.route("/update/:id").post(function (req, response) {
+Router.route("/update/:id").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myquery = { _id: ObjectId(req.params.id) };
     let newvalues = {
@@ -61,7 +61,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
 });
 
 // This section will help you delete a record
-recordRoutes.route("/:id").delete((req, response) => {
+Router.route("/:id").delete((req, response) => {
     let db_connect = dbo.getDb();
     let myquery = { _id: ObjectId(req.params.id) };
     db_connect.collection("records").deleteOne(myquery, function (err, obj) {
@@ -71,4 +71,4 @@ recordRoutes.route("/:id").delete((req, response) => {
     });
 });
 
-module.exports = recordRoutes;
+module.exports = Router;

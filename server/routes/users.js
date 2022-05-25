@@ -1,10 +1,10 @@
 const express = require("express");
-const recordRoutes = express.Router();
+const Router = express.Router();
 
 // connect to the database
 const dbo = require("../db/connection");
 
-recordRoutes.route("/auth").get(function (req, res) {
+Router.route("/auth").get(function (req, res) {
     let db_connect = dbo.getDb("Fezzane");
     db_connect
         .collection("users")
@@ -15,7 +15,7 @@ recordRoutes.route("/auth").get(function (req, res) {
         });
 });
 
-recordRoutes.route("/record/add").post(function (req, response) {
+Router.route("/auth").post(function (req, response) {
     let db_connect = dbo.getDb();
     let myobj = {
         username: req.body.username,
@@ -27,4 +27,4 @@ recordRoutes.route("/record/add").post(function (req, response) {
     });
 });
 
-module.exports = recordRoutes;
+module.exports = Router;
