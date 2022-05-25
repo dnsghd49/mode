@@ -22,7 +22,7 @@ function Main() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -35,7 +35,7 @@ function Main() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
