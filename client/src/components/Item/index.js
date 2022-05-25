@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const List = (props) => (
     <tr>
+        <td><img src={props.record.image_url} alt={props.record.product_name} /></td>
         <td>{props.record.product_name}</td>
         <td>{props.record.price}</td>
         <td>{props.record.product_description}</td>
@@ -72,10 +73,10 @@ function ItemList() {
             <table className="table table-striped" style={{ marginTop: 20 }}>
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
-                        <th>Name</th>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Product Description</th>
                     </tr>
                 </thead>
                 <tbody>{recordList()}</tbody>

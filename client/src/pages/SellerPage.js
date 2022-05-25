@@ -1,7 +1,9 @@
+import ItemList from "../components/Item";
+
 function SellerPage() {
     return (
         <div>
-            this is SellerPage
+            <ItemList />
         </div>
     );
 }
