@@ -14,8 +14,7 @@
     "install": "concurrently \"npm run servermod\" \"npm run clientmod\"",
     "servermod": "cd server && npm install",
     "clientmod": "cd client && npm install",
-    "build": "npm run start",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run start"
   },
   "repository": {
     "type": "git",
