@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/esm/Button";
 
-function ShopAll() {
+function Products() {
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />
@@ -17,4 +17,4 @@ function ShopAll() {
     );
 }
 
-export default ShopAll;
+export default Products;

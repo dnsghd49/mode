@@ -5,7 +5,7 @@ import Main from './pages/Main';
 import Topbar from './components/Topbar';
 import MainNav from './components/MainNav';
 import Carts from './components/Carts';
-import ShopAll from './pages/ShopAll';
+import ShopAll from './pages/ShopAll/ShopAll';
 import AboutUs from './pages/AboutUs';
 import Events from './pages/Events';
 import FashionSus from './pages/FashionSus';
