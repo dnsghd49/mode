@@ -12,7 +12,7 @@ import FashionSus from './pages/FashionSus';
 import Footer from './components/Footer';
 import Create from './components/Create';
 import Edit from './components/Edit';
-import SellerPage from './pages/SellerPage';
+import SellerPage from './pages/SellerPage/SellerPage';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       {/* <Create /> */}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

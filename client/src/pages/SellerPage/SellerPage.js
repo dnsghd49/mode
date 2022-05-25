@@ -1,4 +1,5 @@
-import ItemList from "../components/Item";
+import "./style.css"
+import ItemList from "../../components/Item";
 import { useNavigate } from "react-router-dom";
 import Button from "react-bootstrap/esm/Button";
 
@@ -10,9 +11,11 @@ function SellerPage() {
     };
 
     return (
-        <div className="space">
+        <div>
             <ItemList />
-            <Button onClick={redirect}>Create Product</Button>
+            <div className="space">
+                <Button onClick={redirect}>Create Product</Button>
+            </div>
         </div>
     );
 }

@@ -1,3 +1,5 @@
+import "./style.css"
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 // import FileBase64 from 'react-file-base64';
@@ -45,7 +47,7 @@ function Create() {
     return (
         <div>
             <h3>Register a new product</h3>
-            <form onSubmit={onSubmit}>
+            <form className="form-spacing" onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="product_name">Product Name</label>
                     <input
@@ -93,7 +95,7 @@ function Create() {
                     multiple={true}
                     onDone={(e) => updateForm({ image_url: e.target.value })} /> */}
 
-                <div className="form-group">
+                <div className="form-group create-btn">
                     <input
                         type="submit"
                         value="Create Item"

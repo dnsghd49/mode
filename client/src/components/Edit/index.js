@@ -1,3 +1,4 @@
+import "./style.css"
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router";
 
@@ -46,7 +47,7 @@ function Edit() {
 
     async function onSubmit(e) {
         e.preventDefault();
-        const editedPerson = {
+        const editedItem = {
             product_name: form.product_name,
             price: form.price,
             product_description: form.product_description,
@@ -56,20 +57,20 @@ function Edit() {
         // This will send a post request to update the data in the database.
         await fetch(`http://localhost:5000/update/${params.id}`, {
             method: "POST",
-            body: JSON.stringify(editedPerson),
+            body: JSON.stringify(editedItem),
             headers: {
                 'Content-Type': 'application/json'
             },
         });
 
-        navigate("/");
+        navigate("/dashboard");
     }
 
     // This following section will display the form that takes input from the user to update the data.
     return (
         <div>
             <h3>Update Record</h3>
-            <form onSubmit={onSubmit}>
+            <form className="edit-spacing" onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="product_name">Product Name</label>
                     <input

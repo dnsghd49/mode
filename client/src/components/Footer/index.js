@@ -1,6 +1,8 @@
+import "./style.css"
+
 function Footer() {
     return (
-        <div>
+        <div className="space">
             this is footer
         </div>
     )
