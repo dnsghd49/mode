@@ -26,7 +26,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/events" element={<Events />} />
           <Route path="/fashion-sustainability" element={<FashionSus />} />
-          <Route exact path="/item-lists" element={<ItemList />} />
+          <Route exact path="/dashboard" element={<ItemList />} />
           <Route path="/create" element={<Create />} />
         </Routes>
       </BrowserRouter>
