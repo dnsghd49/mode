@@ -19,13 +19,11 @@ function Products() {
         console.log(product)
         return (
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src={product.image_url} />
                 <Card.Body>
                     <Card.Title>{product.product_name}</Card.Title>
-                    <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
-                    </Card.Text>
+                    <Card.Text>{product.price}</Card.Text>
+                    <Card.Text>{product.product_description}</Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
             </Card>
