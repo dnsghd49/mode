@@ -47,7 +47,7 @@ function Create() {
             <h3>Register a new product</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="product_name">product_name</label>
+                    <label htmlFor="product_name">Product Name</label>
                     <input
                         type="text"
                         className="form-control"
@@ -57,7 +57,7 @@ function Create() {
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="price">price</label>
+                    <label htmlFor="price">Price</label>
                     <input
                         type="text"
                         className="form-control"
@@ -68,7 +68,7 @@ function Create() {
                 </div>
 
                 <div className="form-group">
-                    <label htmlFor="product_description">product_description</label>
+                    <label htmlFor="product_description">Product Description</label>
                     <input
                         type="text"
                         className="form-control"
@@ -78,14 +78,25 @@ function Create() {
                     />
                 </div>
 
-                <FileBase64
+                <div className="form-group">
+                    <label htmlFor="product_description">Image Url</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="image_url"
+                        value={form.image_url}
+                        onChange={(e) => updateForm({ image_url: e.target.value })}
+                    />
+                </div>
+
+                {/* <FileBase64
                     multiple={true}
-                    onDone={(e) => updateForm({ image_url: e.target.value })} />
+                    onDone={(e) => updateForm({ image_url: e.target.value })} /> */}
 
                 <div className="form-group">
                     <input
                         type="submit"
-                        value="Create person"
+                        value="Create Item"
                         className="btn btn-primary"
                     />
                 </div>

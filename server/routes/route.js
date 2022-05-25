@@ -5,7 +5,7 @@ const Router = express.Router();
 const dbo = require("../db/connection");
 
 // convert the id from string to ObjectId for the _id.
-// const ObjectId = require("mongodb"). ObjectId;
+const ObjectId = require("mongodb"). ObjectId;
 
 
 Router.route("/record").get(function (req, res) {

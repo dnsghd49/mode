@@ -3,10 +3,10 @@ import { useParams, useNavigate } from "react-router";
 
 function Edit() {
     const [form, setForm] = useState({
-        name: "",
-        position: "",
-        level: "",
-        records: [],
+        product_name: "",
+        price: "",
+        product_description: "",
+        image_url: "",
     });
     const params = useParams();
     const navigate = useNavigate();
@@ -47,9 +47,10 @@ function Edit() {
     async function onSubmit(e) {
         e.preventDefault();
         const editedPerson = {
-            name: form.name,
-            position: form.position,
-            level: form.level,
+            product_name: form.product_name,
+            price: form.price,
+            product_description: form.product_description,
+            image_url: form.image_url,
         };
 
         // This will send a post request to update the data in the database.
@@ -70,62 +71,46 @@ function Edit() {
             <h3>Update Record</h3>
             <form onSubmit={onSubmit}>
                 <div className="form-group">
-                    <label htmlFor="name">Name: </label>
+                    <label htmlFor="product_name">Product Name</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="name"
-                        value={form.name}
-                        onChange={(e) => updateForm({ name: e.target.value })}
+                        id="product_name"
+                        value={form.product_name}
+                        onChange={(e) => updateForm({ product_name: e.target.value })}
                     />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="position">Position: </label>
+                    <label htmlFor="price">Price</label>
                     <input
                         type="text"
                         className="form-control"
-                        id="position"
-                        value={form.position}
-                        onChange={(e) => updateForm({ position: e.target.value })}
+                        id="price"
+                        value={form.price}
+                        onChange={(e) => updateForm({ price: e.target.value })}
                     />
                 </div>
+
                 <div className="form-group">
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionIntern"
-                            value="Intern"
-                            checked={form.level === "Intern"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionIntern" className="form-check-label">Intern</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionJunior"
-                            value="Junior"
-                            checked={form.level === "Junior"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionJunior" className="form-check-label">Junior</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="positionOptions"
-                            id="positionSenior"
-                            value="Senior"
-                            checked={form.level === "Senior"}
-                            onChange={(e) => updateForm({ level: e.target.value })}
-                        />
-                        <label htmlFor="positionSenior" className="form-check-label">Senior</label>
-                    </div>
+                    <label htmlFor="product_description">Product Description</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="product_description"
+                        value={form.product_description}
+                        onChange={(e) => updateForm({ product_description: e.target.value })}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="product_description">Image Url</label>
+                    <input
+                        type="text"
+                        className="form-control"
+                        id="image_url"
+                        value={form.image_url}
+                        onChange={(e) => updateForm({ image_url: e.target.value })}
+                    />
                 </div>
                 <br />
 

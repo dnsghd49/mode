@@ -12,6 +12,7 @@ import FashionSus from './pages/FashionSus';
 import Footer from './components/Footer';
 import Create from './components/Create';
 import ItemList from './components/Item';
+import Edit from './components/Edit';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/fashion-sustainability" element={<FashionSus />} />
           <Route exact path="/dashboard" element={<ItemList />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/edit/:id" element={<Edit />} />
         </Routes>
       </BrowserRouter>
       {/* <Create /> */}
