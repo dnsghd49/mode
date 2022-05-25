@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import "./style.css"
+
 const List = (props) => (
     <tr>
         <td><img src={props.record.image_url} alt={props.record.product_name} /></td>
