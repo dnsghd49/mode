@@ -1,4 +1,6 @@
 .flex {
+    margin-top: 70px;
+    margin-bottom: 500px;
     display: flex;
     justify-content: space-between;
 }

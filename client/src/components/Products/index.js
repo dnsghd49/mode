@@ -24,7 +24,7 @@ function Products() {
                     <Card.Title>{product.product_name}</Card.Title>
                     <Card.Text>{product.price}</Card.Text>
                     <Card.Text>{product.product_description}</Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary">Buy Now</Button>
                 </Card.Body>
             </Card>
         )

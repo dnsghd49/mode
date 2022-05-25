@@ -6,6 +6,7 @@ function Main() {
     return (
         <div>
             <SlideShow />
+            <h1>fast fashion</h1>
             <CardGroup>
                 <Card>
                     <Card.Img variant="top" src="holder.js/100px160" />
