@@ -46,6 +46,7 @@ function Signup(props) {
 
         setSignup({ user_name: "", email: "", password: "" });
         navigate("/dashboard");
+        props.setTrigger(false)
     }
 
     return (props.trigger) ? (
@@ -59,7 +60,6 @@ function Signup(props) {
                         <Form.Control
                             type="username"
                             placeholder="Enter username"
-                            id="user_name"
                             value={signup.user_name}
                             onChange={(e) => updateUser({ user_name: e.target.value })} />
                     </Form.Group>
@@ -68,7 +68,6 @@ function Signup(props) {
                         <Form.Control
                             type="email"
                             placeholder="Enter email"
-                            id="email"
                             value={signup.email}
                             onChange={(e) => updateUser({ email: e.target.value })} />
                     </Form.Group>
@@ -77,7 +76,6 @@ function Signup(props) {
                         <Form.Control
                             type="password"
                             placeholder="Password"
-                            id="password"
                             value={signup.password}
                             onChange={(e) => updateUser({ password: e.target.value })} />
                     </Form.Group>
