@@ -7,7 +7,7 @@ import MainNav from './components/MainNav';
 import Carts from './components/Carts';
 import ShopAll from './pages/ShopAll/ShopAll';
 import AboutUs from './pages/AboutUs';
-import Events from './pages/Events';
+import Events from './pages/Events/Events';
 import FashionSus from './pages/FashionSus/FashionSus';
 // import Footer from './components/Footer';
 import Create from './components/Create';
