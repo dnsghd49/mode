@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "concurrently \"npm run client\" \"npm run server\"",
     "server": "cd server && npm start",
     "client": "cd client && npm start",
     "install": "concurrently \"npm run servermod\" \"npm run clientmod\"",
