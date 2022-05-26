@@ -14,7 +14,8 @@
     "install": "concurrently \"npm run servermod\" \"npm run clientmod\"",
     "servermod": "cd server && npm install",
     "clientmod": "cd client && npm install",
-    "heroku-postbuild": "npm run start"
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
   },
   "homepage": "https://github.com/dnsghd49/mode#readme",
   "dependencies": {
-    "concurrently": "^7.2.1"
+    "concurrently": "^7.2.1",
+    "dotenv": "^16.0.0"
   }
 }
