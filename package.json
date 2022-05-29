@@ -2,7 +2,8 @@
   "name": "mode",
   "version": "1.0.0",
   "engines": {
-    "node": "17.4.0"
+    "node": "17.4.0",
+    "npm": "8.5.1"
   },
   "description": "",
   "main": "index.js",
