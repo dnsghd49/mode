@@ -8,9 +8,9 @@ function Main() {
         <div>
             <SlideShow />
             <h1>Fezzane<br />Fast & Sustainable <br /> Fashion </h1>
-            <CardGroup>
+            <CardGroup className="cus-sty">
                 <Card>
-                    <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />
+                    <Card.Img variant="top" src="https://github.com/dnsghd49/imgdump/blob/main/img/3.png?raw=true" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -23,7 +23,7 @@ function Main() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />
+                    <Card.Img variant="top" src="https://github.com/dnsghd49/imgdump/blob/main/img/4.png?raw=true" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
@@ -36,7 +36,7 @@ function Main() {
                     </Card.Footer>
                 </Card>
                 <Card>
-                    <Card.Img variant="top" src="https://www.byrdie.com/thmb/xn3FNlXAzzpI6k8cpWT0WLOLguQ=/735x0/fashionbloggersprimary-2210aaad71a0454a899fa4345bef529f.jpg" />
+                    <Card.Img variant="top" src="https://github.com/dnsghd49/imgdump/blob/main/img/5.png?raw=true" />
                     <Card.Body>
                         <Card.Title>Card title</Card.Title>
                         <Card.Text>
